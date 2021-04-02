@@ -1,0 +1,463 @@
+/* 
+  ************************************************************
+    Título: Portafolio
+    Descripción: Ejemplo de portafolio hecho en HTML y CSS. 
+    Responsive. Flexbox. Animaciones en CSS
+    Autor:  Diana Chacón Ocariz
+  ************************************************************ 
+*/
+
+
+* {
+  margin: 0; 
+  padding: 0; 
+  border: 0;
+}
+
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: white;
+  color: #585858;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #585858;
+  font-style: italic;
+}
+
+a:hover {
+  color: black;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+p {
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 1.5% 0;
+}
+
+ol {
+  text-align: justify;
+  font-size: 1rem;
+}
+
+.fab {
+  color: #585858;
+  font-size: 2rem;
+}
+
+#navbar ul {
+  list-style: none;
+}
+
+.texto {
+  visibility: hidden;
+}
+
+#navbar1 {
+  width: 50px;
+  height: 50px;
+  background-color: #d61011;
+  position: absolute;
+  left: 30px;
+  top: 30px;
+  transform: rotate(20deg);
+}
+
+#navbar2 {
+  width: 60px;
+  height: 60px;
+  background-color: #363488;
+  position: absolute;
+  left: 280px;
+  top: 45px;
+  transform: rotate(70deg);
+}
+
+#navbar3 {
+  width: 40px;
+  height: 40px;
+  background-color: #73b829;
+  position: absolute;
+  left: 180px;
+  top: 25px;
+  transform: rotate(45deg);
+}
+
+#navbar4 {
+  width: 45px;
+  height: 45px;
+  background-color: #e2c200;
+  position: absolute;
+  left: 200px;
+  top: 100px;
+  transform: rotate(80deg);
+}
+
+#navbar5 {
+  width: 55px;
+  height: 55px;
+  background-color: black;
+  position: absolute;
+  left: 100px;
+  top: 90px;
+  transform: rotate(60deg);
+}
+
+#navbar1:hover,
+#navbar2:hover,
+#navbar3:hover,
+#navbar4:hover,
+#navbar5:hover,
+.return:hover{
+  transform: rotate(90deg);
+  transition: all 0.4s linear;
+}
+
+.return {
+  position: relative;
+  left: 90%;
+  width: 30px;
+  height: 30px;
+  background-color: #d61011;
+  transform: rotate(55deg);
+}
+
+.cuadro:hover {
+  visibility: hidden;
+}
+
+.cuadro:hover .texto {
+  visibility: visible;
+  font-size: 1rem;
+  text-align: left;
+  letter-spacing: 0.3ch;
+  line-height: 2ex;
+  margin-left: -10px;
+  color:#585858;
+  transform: rotate(-90deg);
+  transition: all 0.4s linear;
+}
+
+#header h1 {
+  position: relative;
+  margin-top: 180px;
+  text-align: center;
+  color:#d61011;
+  margin-bottom: 3%;
+} 
+
+#main {
+  position: relative; 
+}
+
+#footer {
+  background-color: black;
+  height: 30px;
+}
+
+#footer p {
+  color: white;
+  font-style: italic;
+  font-size: 0.7rem;
+  text-align: center;
+  padding-top: 8px;
+}
+
+#welcome-section,
+#projects,
+#chez-diana,
+#contact {
+  padding: 3%;
+}
+
+
+#inside-welcome {
+  display: flex;
+  flex-flow: column;
+  justify-content:space-between;
+  align-items: center;
+  margin: 2%;
+}
+
+
+#welcome-section ol {
+  margin-left: 10%;
+}
+
+
+#projects h2 {
+  color:#363488;
+}
+
+
+#chez-diana h2 {
+  color:#73b829;
+}
+
+#contact h2 {
+  color:#e2c200;
+}
+
+.portafolio {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 3% 0;
+}
+
+#inside-contact {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+.portafolio {
+  justify-content: space-between;
+}
+
+.fab {
+  color: #585858;
+  font-size: 3em;
+}
+
+.fab:hover {
+  color: #e2c200;
+}
+
+
+
+
+
+/* Efecto sobre items portafolio */
+/* Extraido y adaptado de https://gudh.github.io/ihover/dist/# */
+
+
+.project-tile {
+  position: relative;
+}
+
+.project-tile a:hover {
+  text-decoration: none;
+}
+
+.portafolio-img {
+  height: 180px;
+  width: 180px;
+  margin-bottom: 8%;
+}
+
+.project-tile.square .info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 180px;
+  padding: 2%;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.project-tile.square.effect3 {
+  overflow: hidden;
+}
+
+.project-tile.square.effect3.colored.personal .info {
+  background: #d61011;
+}
+
+.project-tile.square.effect3.colored.informatica .info {
+  background: #363488;
+}
+
+.project-tile.square.effect3.colored.chezdiana .info {
+  background: #73b829;
+}
+
+
+.project-tile.square.effect3 .info {
+  transition: all 0.35s ease-in-out;
+}
+
+.project-tile.square.effect3 .info h3 {
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.project-tile.square.effect3 .info p {
+  font-style: italic;
+  font-size: 0.6rem;
+  color: white;
+  text-align: center;
+}
+
+.project-tile.square.effect3 a:hover .info {
+  visibility: visible;
+}
+
+.project-tile.square.effect3.bottom_to_top .info {
+  top: auto;
+  transform: translateY(100%);
+}
+.project-tile.square.effect3.bottom_to_top a:hover .portafolio-img{
+  opacity: 0.4;
+  transition: all 0.45s ease-in-out;
+}
+.project-tile.square.effect3.bottom_to_top a:hover .info {
+  transform: translateY(0);
+}
+
+.project-tile.square.effect3.top_to_bottom .info {
+  bottom: auto;
+  transform: translateY(-100%);
+}
+
+.project-tile.square.effect3.top_to_bottom a:hover .info {
+  transform: translateY(0);
+}
+
+@media only screen and (min-width: 600px) {
+
+ 
+  #inside-welcome {
+    flex-flow: row wrap;
+  }
+
+  #inside-welcome1 {
+    width: 180px;
+  }
+
+  #inside-welcome2 {
+    width: 60%;
+  }
+ 
+  .portafolio,
+  #inside-contact {
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin: 2.5% 0;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  #footer p {
+    font-size: 0.8em;
+    padding-top: 10px;
+  }
+
+  .fab {
+    font-size: 5em;
+  }
+
+  #header {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  #inside-header1,
+  #inside-header1 {
+    width: 45%;
+  }
+
+ 
+  #header h1 {
+    position: relative;
+    top: -120px;
+    left: 25%;
+  } 
+
+  #main {
+    top:-110px;
+  }
+
+  #inside-welcome1 {
+    width: 240px;
+  }
+
+  .portafolio-img {
+    height: 240px;
+    width: 240px;
+  }
+
+  .project-tile.square .info {
+    width: 240px;
+  }
+
+  .project-tile.square.effect3 .info {
+    height: 60px;
+  }
+
+  .project-tile.square.effect3 .info h3 {
+    font-size: 1rem;
+  }
+
+  .project-tile.square.effect3 .info p {
+    font-size: 0.8rem;
+  }
+
+
+}
+
+
+@media only screen and (min-width: 1100px) {
+
+  p {
+    font-size: 1.5em;
+    line-height: 2em;
+  }
+
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  #footer p {
+    font-size: 1em;
+    padding-top: 5px;
+  }
+
+  .project-tile.square.effect3 .info {
+    height: 75px;
+  }
+
+  .project-tile.square.effect3 .info h3 {
+    font-size: 1.3em;
+  }
+
+  .project-tile.square.effect3 .info p {
+    font-size: 1.1em;
+  }
+
+
+} 

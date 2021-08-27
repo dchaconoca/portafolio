@@ -1,6 +1,6 @@
 # Portafolio de Diana Chacón Ocariz
 
-Un resumen de mi vida profesional.
+Ejercicio de HTML y CSS.
 
 Los cuadritos arriba y a la izquierda constituyen el menú de la página.
 
